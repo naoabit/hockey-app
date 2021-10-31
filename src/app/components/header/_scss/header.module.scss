@@ -1,0 +1,15 @@
+@import '@app/_scss/_colors.scss';
+@import '@app/_scss/_variables.scss';
+
+.header {
+    display: flex;
+    font-family: 'Montserrat';
+    background-color: $turqoise;
+    color: $white;
+}
+
+.text {
+    margin-left: 2rem;
+    font-size: 2rem;
+    text-align: left;
+}
