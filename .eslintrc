@@ -1,0 +1,108 @@
+{
+  "parser": "espree",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 2021,
+    "ecmaFeatures": {
+      "jsx": true,
+      "experimentalObjectRestSpread": true
+    }
+  },
+  "plugins": [
+    "react"
+  ],
+  "extends": [
+    "airbnb-base"
+  ],
+  "env": {
+    "browser": true,
+    "mocha": true,
+    "node": true,
+    "jest": true
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "./webpack.config.js"
+      }
+    }
+  },
+  "rules": {
+    "no-param-reassign": ["off"],
+    "no-console": ["warn", { "allow": ["error", "debug"] }],
+    "react/jsx-filename-extension": "off",
+    "import/newline-after-import": [
+      "off"
+    ],
+    "no-nested-ternary": [
+      "error"
+    ],
+    "no-unneeded-ternary": [
+      "error"
+    ],
+    "no-var": [
+      "error"
+    ],
+    "brace-style": [
+      0,
+      "1tbs"
+    ],
+    "indent": [
+      "error",
+      4
+    ],
+    "no-underscore-dangle": "off",
+    "one-var": [
+      "error",
+      "never"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": false
+      }
+    ],
+    "space-infix-ops": [
+      "error"
+    ],
+    "func-names": [
+      "warn",
+      "as-needed"
+    ],
+    "class-methods-use-this": [
+      "off"
+    ],
+    "react/display-name": 1,
+    "react/forbid-prop-types": 1,
+    "react/jsx-boolean-value": 1,
+    "react/jsx-closing-bracket-location": 0,
+    "react/jsx-curly-spacing": 1,
+    "react/jsx-handler-names": 1,
+    "react/jsx-indent-props": 1,
+    "react/jsx-key": 1,
+    "react/jsx-max-props-per-line":  [
+      "error",
+      { "maximum": 4 }
+    ],
+    "react/jsx-no-bind": 0,
+    "react/jsx-no-duplicate-props": 1,
+    "react/jsx-no-literals": 1,
+    "react/jsx-no-undef": 1,
+    "react/jsx-pascal-case": 1,
+    "react/jsx-sort-props": 1,
+    "react/jsx-uses-react": 1,
+    "react/jsx-uses-vars": 1,
+    "react/no-danger": 1,
+    "react/no-did-mount-set-state": 1,
+    "react/no-did-update-set-state": 1,
+    "react/no-direct-mutation-state": 1,
+    "react/no-multi-comp": 1,
+    "react/no-set-state": 0,
+    "react/no-unknown-property": 1,
+    "react/prefer-es6-class": 1,
+    "react/prop-types": 1,
+    "react/react-in-jsx-scope": 1,
+    "react/self-closing-comp": 1,
+    "react/sort-comp": 1
+  }
+}
