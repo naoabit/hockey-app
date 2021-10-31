@@ -1,14 +1,9 @@
-// Trigger dotenv-safe only for developments purposes.
-if (!process.env.NODE_ENV) {
-    require('dotenv-safe').config(); // eslint-disable-line global-require
-}
+require('dotenv').config(); // eslint-disable-line global-require
 
-const path = require('path'); // eslint-disable-line
+const path = require('path');
 const withImages = require('next-images');
 const withBundleAnalyzer = require('@next/bundle-analyzer');
 const withPlugins = require('next-compose-plugins');
-
-const webpackConfig = require('./webpack.config');
 
 const sass = {
     sassOptions: {
@@ -18,9 +13,6 @@ const sass = {
     assetPrefix: process.env.APP_URL,
     publicRuntimeConfig: {
         APP_URL: process.env.APP_URL,
-    },
-    env: {
-        API_GATEWAY_HOST: process.env.API_GATEWAY_HOST,
     },
     webpack: (config, { dev }) => {
         if (dev) {
