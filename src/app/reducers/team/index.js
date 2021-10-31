@@ -5,7 +5,7 @@ const initialState = {
     coach: '',
     players: [
         {
-            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
+            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: true,
         },
         {
             name: 'Jean', lastName: 'Dujardin', number: 5, position: 'left', isCaptain: false,

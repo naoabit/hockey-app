@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import TeamListItem from './TeamListItemComponent';
+import TeamListHeader from './header/TeamListHeaderComponent';
+import TeamListItem from './item/TeamListItemComponent';
 
 const storePropsSelector = (state) => ({
     players: state.team.players,
@@ -13,7 +14,12 @@ const TeamList = () => {
         players.map((player, index) => <TeamListItem key={index} {...player}/>)
     );
 
-    return renderPlayers();
+    return (
+        <>
+            <TeamListHeader />
+            {renderPlayers()}
+        </>
+    );
 };
 
 export default TeamList;
