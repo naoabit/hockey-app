@@ -40,7 +40,7 @@ describe('<AddPlayerForm />', () => {
         expect(wrapper.childAt(3).is('FormInputText')).toBe(true);
         expect(wrapper.childAt(4).is('FormInputCheckbox')).toBe(true);
     });
-    
+
     it('should dispatch setDialog', () => {
         wrapper.childAt(0).props().onChange({ name: 'Dope name', isCaptain: false });
         expect(setDialog).toHaveBeenCalledWith({
@@ -51,5 +51,4 @@ describe('<AddPlayerForm />', () => {
             },
         });
     });
-    
 });

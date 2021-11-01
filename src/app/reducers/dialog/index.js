@@ -19,7 +19,6 @@ const dialogSlice = createSlice({
             state.data = action.payload.data;
         },
     },
-    extraReducers: {},
 });
 
 export const { showDialog, hideDialog, setDialog } = dialogSlice.actions;

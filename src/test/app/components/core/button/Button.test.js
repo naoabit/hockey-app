@@ -21,10 +21,10 @@ describe('<Button />', () => {
 
         it('should render component', () => {
             expect(toJson(wrapper)).toMatchSnapshot();
-            
+
             const text = wrapper.childAt(0);
             const icon = wrapper.childAt(1);
-            
+
             expect(wrapper.props().className).toEqual('la classe button');
             expect(!!wrapper.props().onClick).toBe(true);
             expect(text.is('Translate')).toBe(true);
