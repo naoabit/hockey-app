@@ -11,13 +11,18 @@ const team = {
         position: 'Position',
         isCaptain: 'Is Captain',
     },
-    addPlayerDialog: {
-        cancel: 'Cancel',
-        save: 'Save',
+};
+
+const addPlayerForm = {
+    cancel: 'Cancel',
+    save: 'Save',
+    input: {
+        isCaptain: 'Is Captain',
     },
 };
 
 export default {
+    addPlayerForm,
     app,
     team,
 };

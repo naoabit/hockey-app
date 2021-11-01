@@ -26,7 +26,7 @@ const SaveButton = () => {
         <Button
             className={styles.save}
             handleClick={handleClick}
-            text={'team.addPlayerDialog.save'}
+            text={'addPlayerForm.save'}
         />
     );
 };

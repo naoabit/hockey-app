@@ -30,7 +30,7 @@ Button.propTypes = {
     className: PropTypes.string,
     disabled: PropTypes.bool.isRequired,
     handleClick: PropTypes.func.isRequired,
-    icon: PropTypes.node.isRequired,
+    icon: PropTypes.node,
     text: PropTypes.string,
 };
 

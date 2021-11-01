@@ -19,7 +19,7 @@ const CancelButton = () => {
         <Button
             className={styles.cancel}
             handleClick={handleClick}
-            text={'team.addPlayerDialog.cancel'}
+            text={'addPlayerForm.cancel'}
         />
     );
 };

@@ -3,6 +3,7 @@
 .dialog {
     position: relative;
     height: 100%;
+    padding: 1rem;
 }
 
 .cancel {
@@ -25,6 +26,11 @@
 .dialogFooter {
     display: flex;
     position: absolute;
-    bottom: 1rem;
+    bottom: 3rem;
     right: 1rem;
+}
+
+.formInput {
+    height: 3rem;
+    line-height: 3rem;
 }
