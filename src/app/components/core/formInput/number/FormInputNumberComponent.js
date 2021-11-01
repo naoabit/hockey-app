@@ -39,7 +39,7 @@ FormInputNumber.propTypes = {
     inputKey: Proptypes.string,
     label: Proptypes.string,
     onChange: Proptypes.func,
-    value: Proptypes.bool,
+    value: Proptypes.number,
 };
 
 export default FormInputNumber;

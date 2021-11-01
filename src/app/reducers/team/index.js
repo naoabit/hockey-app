@@ -5,31 +5,31 @@ const initialState = {
     coach: '',
     players: [
         {
-            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: true,
+            id: 1, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: true,
         },
         {
-            name: 'Jean', lastName: 'Dujardin', number: 5, position: 'left', isCaptain: false,
+            id: 2, name: 'Jean', lastName: 'Dujardin', number: 5, position: 'left', isCaptain: false,
         },
         {
-            name: 'Scarlett', lastName: 'Johanson', number: 13, position: 'right', isCaptain: false,
+            id: 3, name: 'Scarlett', lastName: 'Johanson', number: 13, position: 'right', isCaptain: false,
         },
         {
-            name: 'Kristen', lastName: 'Stewart', number: 3, position: 'centre', isCaptain: false,
+            id: 4, name: 'Kristen', lastName: 'Stewart', number: 3, position: 'centre', isCaptain: false,
         },
         {
-            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
+            id: 5, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
         },
         {
-            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
+            id: 6, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
         },
         {
-            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
+            id: 7, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
         },
         {
-            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
+            id: 8, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
         },
         {
-            name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
+            id: 9, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
         },
     ],
 };

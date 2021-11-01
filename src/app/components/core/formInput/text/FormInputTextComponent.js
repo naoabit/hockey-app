@@ -39,7 +39,7 @@ FormInputText.propTypes = {
     inputKey: Proptypes.string,
     label: Proptypes.string,
     onChange: Proptypes.func,
-    value: Proptypes.bool,
+    value: Proptypes.string,
 };
 
 export default FormInputText;

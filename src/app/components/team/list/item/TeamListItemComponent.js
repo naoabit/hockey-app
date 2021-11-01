@@ -1,6 +1,6 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+import PlayerPropTypes from '@app/propTypes/player';
 import EditButton from './editButtton/TeamListItemEditButtonComponent';
 import TeamListItemCaptain from './TeamListItemCaptainComponent';
 import styles from '../_scss/teamList.module.scss';
@@ -16,12 +16,6 @@ const TeamListItem = (props) => (
     </ul>
 );
 
-TeamListItem.propTypes = {
-    isCaptain: PropTypes.bool,
-    lastName: PropTypes.string,
-    name: PropTypes.string,
-    number: PropTypes.number,
-    position: PropTypes.string,
-};
+TeamListItem.propTypes = PlayerPropTypes;
 
 export default TeamListItem;
