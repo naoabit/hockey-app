@@ -8,7 +8,7 @@ const Header = () => (
         <p className={styles.text}>
             <Translate
                 dangerousHTML
-                value="app.title"
+                value='app.title'
             />
         </p>
     </header>

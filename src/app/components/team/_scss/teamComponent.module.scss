@@ -1,3 +1,10 @@
 .teamComponentWrapper {
-    padding: 6rem;
+    margin: 6rem;
+    position: relative;
+}
+
+.addPlayerButton {
+    position: absolute;
+    right: 0;
+    top: 0;
 }

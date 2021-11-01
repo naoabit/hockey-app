@@ -1,0 +1,28 @@
+@import '@app/_scss/_variables.scss';
+@import '@app/_scss/_colors.scss';
+
+.button {
+    width: $button-width;
+    height: $button-height;
+    line-height: $button-height;
+    background-color: $turqoise;
+    color: $white;
+    position: relative;
+    border-radius: .3rem;
+
+    span {
+        margin-left: 1rem;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.icon {
+    position: absolute;
+    right: 0.6rem;
+    top: .2rem;
+    width: 1rem;
+    fill: $white;
+}

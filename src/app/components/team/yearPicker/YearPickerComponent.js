@@ -17,7 +17,7 @@ const YearPicker = () => {
     };
 
     return (
-        <Dropdown options={options} onHandleChange={onHandleChange}/>
+        <Dropdown onHandleChange={onHandleChange} options={options}/>
     );
 };
 

@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import TeamListHeader from './header/TeamListHeaderComponent';
 import TeamListItem from './item/TeamListItemComponent';
 
+import styles from './_scss/teamList.module.scss';
+
 const storePropsSelector = (state) => ({
     players: state.team.players,
 });
@@ -15,10 +17,10 @@ const TeamList = () => {
     );
 
     return (
-        <>
+        <div className={styles.teamListWrapper}>
             <TeamListHeader />
             {renderPlayers()}
-        </>
+        </div>
     );
 };
 

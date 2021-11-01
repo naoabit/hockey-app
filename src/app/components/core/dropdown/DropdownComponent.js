@@ -14,8 +14,8 @@ const Dropdown = (props) => {
     return (
         <div className={className}>
             <Select
-                options={props.options}
                 onChange={props.onHandleChange}
+                options={props.options}
             />
         </div>
     );

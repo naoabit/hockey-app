@@ -3,6 +3,7 @@ const app = {
 };
 
 const team = {
+    addPlayer: 'Add player',
     list: {
         name: 'Name',
         lastName: 'Last Name',
