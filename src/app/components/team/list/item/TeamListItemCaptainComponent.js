@@ -7,8 +7,7 @@ import styles from '../_scss/teamList.module.scss';
 const TeamListItem = (props) => {
     const className = classNames({
         [styles.active]: props.isCaptain,
-    },
-    styles.captain);
+    }, styles.captain);
 
     return (
         <div className={styles.listItemColumn}>
