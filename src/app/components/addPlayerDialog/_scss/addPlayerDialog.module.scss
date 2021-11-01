@@ -3,7 +3,7 @@
 .dialog {
     position: relative;
     height: 100%;
-    padding: 1rem;
+    padding: 4rem;
 }
 
 .cancel {
@@ -26,11 +26,34 @@
 .dialogFooter {
     display: flex;
     position: absolute;
-    bottom: 3rem;
+    bottom: 9rem;
     right: 1rem;
 }
 
 .formInput {
-    height: 3rem;
+    input {
+        height: 3rem;
+        width: 100%;
+        margin-bottom: 2rem;
+        border: none;
+        border-bottom: .1rem solid $grey-0;
+        &:focus {
+            outline: none;
+        }
+    }
+    label {
+        display: block;
+    }
+}
+
+.checkboxInput {
+    display: flex;
     line-height: 3rem;
+    input {
+        width: initial;
+    }
+    label {
+        margin-top: .2rem;
+        margin-left: 1rem;
+    }
 }

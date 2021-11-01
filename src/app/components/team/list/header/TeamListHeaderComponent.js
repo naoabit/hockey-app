@@ -22,7 +22,7 @@ const TeamListItemHeader = () => {
 
     const renderTitles = () => (
         TITLES.map((title, index) => (
-            <li className={styles.listItemColumn}>
+            <li className={styles.listItemColumn} key={index}>
                 <Translate dangerouslySetHtml key={index} value={title}/>
             </li>
         ))

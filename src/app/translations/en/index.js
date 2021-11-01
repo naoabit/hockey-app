@@ -17,6 +17,10 @@ const addPlayerForm = {
     cancel: 'Cancel',
     save: 'Save',
     input: {
+        name: 'Name',
+        lastName: 'Last Name',
+        number: 'Number',
+        position: 'Position',
         isCaptain: 'Is Captain',
     },
 };
