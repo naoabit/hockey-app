@@ -1,0 +1,30 @@
+@import '@app/_scss/_colors.scss';
+
+.dialog {
+    position: relative;
+    height: 100%;
+}
+
+.cancel {
+    background-color: $red;
+}
+
+.save {
+    background-color: $green;
+    margin-left: 1rem;
+}
+
+.save, .cancel {
+    text-align: center;
+    text-transform: uppercase;
+    span {
+        margin: 0;
+    }
+}
+
+.dialogFooter {
+    display: flex;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+}

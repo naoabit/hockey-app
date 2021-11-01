@@ -2,12 +2,13 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 
 import { ADD_PLAYER_DIALOG_ID } from '@app/constants/dialog';
-import Dialog from '@app/components/core/dialog/DialogComponent';
+import DialogCore from '@app/components/core/dialog/DialogComponent';
+import AddPlayerDialog from '@app/components/addPlayerDialog/AddPlayerDialogComponent';
 
 const MAP_DIALOGS = [
     {
         id: ADD_PLAYER_DIALOG_ID,
-        children: <div/>,
+        children: <AddPlayerDialog/>,
     },
 ];
 
@@ -15,7 +16,7 @@ const storePropsSelector = ({ dialog }) => ({
     dialogId: dialog.id,
 });
 
-const DialogComponent = () => {
+const Dialog = () => {
     const { dialogId } = useSelector(storePropsSelector);
     const dialog = MAP_DIALOGS.find((d) => d.id === dialogId);
     if (!dialog) {
@@ -23,10 +24,10 @@ const DialogComponent = () => {
     }
 
     return (
-        <Dialog
+        <DialogCore
             children={dialog.children}
         />
     );
 };
 
-export default DialogComponent;
+export default Dialog;

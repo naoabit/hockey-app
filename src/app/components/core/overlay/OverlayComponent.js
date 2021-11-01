@@ -8,7 +8,7 @@ const storePropsSelector = (state) => ({
     show: state.overlay.show,
 });
 
-const OverlayComponent = () => {
+const Overlay = () => {
     const { show } = useSelector(storePropsSelector);
     const dispatch = useDispatch();
 
@@ -26,4 +26,4 @@ const OverlayComponent = () => {
     );
 };
 
-export default OverlayComponent;
+export default Overlay;

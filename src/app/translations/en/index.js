@@ -11,6 +11,10 @@ const team = {
         position: 'Position',
         isCaptain: 'Is Captain',
     },
+    addPlayerDialog: {
+        cancel: 'Cancel',
+        save: 'Save',
+    },
 };
 
 export default {
