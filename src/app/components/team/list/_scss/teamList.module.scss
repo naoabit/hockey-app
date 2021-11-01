@@ -17,6 +17,7 @@ ul, li {
     padding: 1rem;
     text-align: center;
     background-color: $white;
+    position: relative;
 
     &:hover {
         background-color: $grey-1;
@@ -45,4 +46,12 @@ ul, li {
     &.active {
         background-color: $green;
     }
+}
+
+.editButton {
+    width: 2.5rem;
+    margin: auto;
+    position: absolute;
+    right: 1rem;
+    top: 1.3rem;
 }

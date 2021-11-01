@@ -16,9 +16,11 @@ const Button = (props) => {
         }
     };
 
+    const text = props.text || '';
+
     return (
         <div className={className} onClick={handleClick}>
-            <Translate dangerousHTML value={props.text}/>
+            <Translate dangerousHTML value={text}/>
             <div className={styles.icon}>
                 {props.icon}
             </div>

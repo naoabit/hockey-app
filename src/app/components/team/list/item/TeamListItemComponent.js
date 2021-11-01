@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import EditButton from './editButtton/TeamListItemEditButtonComponent';
 import TeamListItemCaptain from './TeamListItemCaptainComponent';
 import styles from '../_scss/teamList.module.scss';
 
@@ -11,6 +12,7 @@ const TeamListItem = (props) => (
         <li className={styles.listItemColumn}>{props.number}</li>
         <li className={styles.listItemColumn}>{props.position}</li>
         <TeamListItemCaptain isCaptain={props.isCaptain}/>
+        <EditButton {...props}/>
     </ul>
 );
 
