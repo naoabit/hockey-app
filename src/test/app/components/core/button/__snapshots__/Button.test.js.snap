@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> enabled should render component 1`] = `
+<div
+  className="la classe button"
+  onClick={[Function]}
+>
+  <Translate
+    dangerousHTML={true}
+    tag="span"
+    value="A button"
+  />
+  <div
+    className="icon"
+  >
+    icon
+  </div>
+</div>
+`;

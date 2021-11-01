@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AddPlayerForm /> should render component 1`] = `
+<div
+  className="form"
+>
+  <FormInputText
+    className="formInput"
+    inputKey="name"
+    key="name"
+    label="addPlayerForm.input.name"
+    onChange={[Function]}
+  />
+  <FormInputText
+    className="formInput"
+    inputKey="lastName"
+    key="lastName"
+    label="addPlayerForm.input.lastName"
+    onChange={[Function]}
+  />
+  <FormInputNumber
+    className="formInput"
+    inputKey="number"
+    key="number"
+    label="addPlayerForm.input.number"
+    onChange={[Function]}
+  />
+  <FormInputText
+    className="formInput"
+    inputKey="position"
+    key="position"
+    label="addPlayerForm.input.position"
+    onChange={[Function]}
+  />
+  <FormInputCheckbox
+    className="checkboxInput formInput"
+    inputKey="isCaptain"
+    key="isCaptain"
+    label="addPlayerForm.input.isCaptain"
+    onChange={[Function]}
+    value={true}
+  />
+</div>
+`;
