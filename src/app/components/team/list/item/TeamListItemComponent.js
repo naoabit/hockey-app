@@ -1,6 +1,7 @@
 import React from 'react';
 
 import PlayerPropTypes from '@app/propTypes/player';
+
 import EditButton from './editButtton/TeamListItemEditButtonComponent';
 import TeamListItemCaptain from './TeamListItemCaptainComponent';
 import styles from '../_scss/teamList.module.scss';

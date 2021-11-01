@@ -2,16 +2,15 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { Translate } from 'react-redux-i18n';
+
 import styles from './_scss/button.module.scss';
 
 const Button = (props) => {
-    const className = classNames({
-        [styles.disabled]: props.disabled,
-    }, props.className, styles.button);
+    const className = classNames(props.className, styles.button);
 
     const handleClick = (ev) => {
         ev.preventDefault();
-        if (!props.disabled && props.handleClick) {
+        if (props.handleClick) {
             props.handleClick();
         }
     };
@@ -30,7 +29,6 @@ const Button = (props) => {
 
 Button.propTypes = {
     className: PropTypes.string,
-    disabled: PropTypes.bool.isRequired,
     handleClick: PropTypes.func.isRequired,
     icon: PropTypes.node,
     text: PropTypes.string,
@@ -38,7 +36,6 @@ Button.propTypes = {
 
 Button.defaultProps = {
     classes: '',
-    disabled: false,
 };
 
 export default Button;

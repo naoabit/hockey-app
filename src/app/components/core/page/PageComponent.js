@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+
 import styles from './_scss/page.module.scss';
 
 const Page = (props) => (

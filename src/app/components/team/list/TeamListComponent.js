@@ -1,8 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
+
 import TeamListHeader from './header/TeamListHeaderComponent';
 import TeamListItem from './item/TeamListItemComponent';
-
 import styles from './_scss/teamList.module.scss';
 
 const storePropsSelector = (state) => ({

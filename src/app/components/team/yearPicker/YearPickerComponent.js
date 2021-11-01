@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import Dropdown from '@app/components/core/dropdown/DropdownComponent';
 
+import Dropdown from '@app/components/core/dropdown/DropdownComponent';
 import { setYear, setPlayers } from '@app/reducers/team';
 import { getTeamByYear } from '@app/thunks/player';
 

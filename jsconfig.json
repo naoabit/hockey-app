@@ -6,8 +6,6 @@
     "baseUrl": "./",
     "paths": {
       "@app/*": ["src/app/*"],
-      "@server/*": ["src/server/*"],
-      "@test/*": ["src/test/*"]
     }
   },
   "exclude": ["node_modules"]

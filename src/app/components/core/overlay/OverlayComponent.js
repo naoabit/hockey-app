@@ -2,6 +2,7 @@ import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
 import { hide } from '@app/reducers/overlay';
+
 import styles from './_scss/overlay.module.scss';
 
 const storePropsSelector = (state) => ({
