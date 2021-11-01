@@ -1,4 +1,11 @@
 $header-height: 5rem;
 
+$default-border-radius: .3rem;
+
 $button-width: 10rem;
 $button-height: 2.4rem;
+
+$dialog-width: 60vw;
+$dialog-height: 80vh;
+$dialog-margin: 5vh  calc((100vw - #{$dialog-width}) / 2);
+$dialog-top: 5vh;

@@ -1,0 +1,13 @@
+@import '@app/_scss/_variables.scss';
+@import '@app/_scss/_colors.scss';
+
+.dialog {
+    width: $dialog-width;
+    height: $dialog-height;
+    margin: $dialog-margin;
+    top: $dialog-top;
+    background-color: $white;
+    z-index: 999;
+    position: absolute;
+    border-radius: $default-border-radius;
+}
