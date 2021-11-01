@@ -1,44 +1,44 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { getTeamByYear, createPlayer, updatePlayer } from '@app/thunks/player';
 
 const initialState = {
     year: 2021,
     coach: '',
-    players: [
-        {
-            id: 1, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: true,
-        },
-        {
-            id: 2, name: 'Jean', lastName: 'Dujardin', number: 5, position: 'left', isCaptain: false,
-        },
-        {
-            id: 3, name: 'Scarlett', lastName: 'Johanson', number: 13, position: 'right', isCaptain: false,
-        },
-        {
-            id: 4, name: 'Kristen', lastName: 'Stewart', number: 3, position: 'centre', isCaptain: false,
-        },
-        {
-            id: 5, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
-        },
-        {
-            id: 6, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
-        },
-        {
-            id: 7, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
-        },
-        {
-            id: 8, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
-        },
-        {
-            id: 9, name: 'Johnny', lastName: 'Depp', number: 3, position: 'centre', isCaptain: false,
-        },
-    ],
+    players: [],
 };
 
 const teamSlice = createSlice({
     name: 'team',
     initialState,
-    reducers: {},
-    extraReducers: {},
+    reducers: {
+        setYear: (state, action) => {
+            state.year = action.payload;
+        },
+        setPlayers: (state, action) => {
+            state.players = action.payload;
+        },
+    },
+    extraReducers: {
+        [getTeamByYear.fulfilled]: (state, action) => {
+            const team = action.payload;
+            state.coach = team.coach;
+            state.players = team.players;
+        },
+        [createPlayer.fulfilled]: (state, action) => {
+            state.players = [
+                ...state.players,
+                action.payload,
+            ];
+        },
+        [updatePlayer.fulfilled]: (state, action) => {
+            const index = state.players.findIndex((player) => player.id === action.payload.id);
+            if (index > -1) {
+                state.players[index] = action.payload;
+            }
+        },
+    },
 });
+
+export const { setYear, setPlayers } = teamSlice.actions;
 
 export default teamSlice.reducer;

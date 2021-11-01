@@ -1,8 +1,10 @@
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import Dropdown from '@app/components/core/dropdown/DropdownComponent';
 
+import { setYear, setPlayers } from '@app/reducers/team';
 import { getTeamByYear } from '@app/thunks/player';
+
 // TODO: get years list in date range
 const YEARS = [
     2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009,
@@ -11,15 +13,28 @@ const YEARS = [
 ];
 const options = YEARS.map((year) => ({ value: year, label: year }));
 
+const storePropsSelector = (state) => ({
+    selectedYear: state.team.year,
+});
+
 const YearPicker = () => {
+    const { selectedYear } = useSelector(storePropsSelector);
+
     const dispatch = useDispatch();
 
-    const onHandleChange = async () => {
-        await dispatch(getTeamByYear());
+    const onHandleChange = async (option) => {
+        dispatch(setYear(option.value));
+        dispatch(setPlayers([]));
     };
 
+    useEffect(() => {
+        dispatch(getTeamByYear());
+    }, [selectedYear]);
+
+    const defaultValue = options.find((option) => option.value === selectedYear);
+
     return (
-        <Dropdown onHandleChange={onHandleChange} options={options}/>
+        <Dropdown defaultValue={defaultValue} onHandleChange={onHandleChange} options={options}/>
     );
 };
 

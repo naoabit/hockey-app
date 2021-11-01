@@ -6,32 +6,30 @@ export const getTeamByYear = createAsyncThunk(
     async (_, { getState }) => {
         const { team } = getState();
 
-        const payload = await playerService.getTeamByYear(team.year);
-        return {
-            payload,
-        };
+        return playerService.getTeamByYear(team.year);
     },
 );
 
-export const createOrUpdatePlayer = createAsyncThunk(
-    'players/createOrUpdatePlayaer',
+export const createPlayer = createAsyncThunk(
+    'players/createPlayer',
     async (_, { getState }) => {
         const { dialog, team } = getState();
         const { data } = dialog;
 
-        let payload = {};
-        if (!data.id) {
-            payload = await playerService.createPlayer(data, team.year);
-        } else {
-            payload = await playerService.updatePlayer({
-                id: data.id,
-                isCaptain: data.isCaptain,
-            });
-        }
+        return playerService.createPlayer(data, team.year);
+    },
+);
 
-        return {
-            payload,
-        };
+export const updatePlayer = createAsyncThunk(
+    'players/updatePlayer',
+    async (_, { getState }) => {
+        const { dialog } = getState();
+        const { data } = dialog;
+
+        return playerService.updatePlayer({
+            id: data.id,
+            isCaptain: data.isCaptain,
+        });
     },
 );
 

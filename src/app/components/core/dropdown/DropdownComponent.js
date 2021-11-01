@@ -14,6 +14,7 @@ const Dropdown = (props) => {
     return (
         <div className={className}>
             <Select
+                defaultValue={props.defaultValue}
                 onChange={props.onHandleChange}
                 options={props.options}
             />
@@ -28,6 +29,7 @@ Dropdown.propTypes = {
         value: PropTypes.string.isRequired,
         label: PropTypes.string.isRequired,
     })).isRequired,
+    defaultValue: PropTypes.string,
 };
 
 Dropdown.defaultProps = {
